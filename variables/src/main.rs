@@ -26,32 +26,33 @@ fn main() {
     while_loop();
 
     for_loop();
-
 }
 
-fn my_function(x: i32, y: i32) -> i32{
+mod const_vs_immutable;
+
+fn my_function(x: i32, y: i32) -> i32 {
     println!("the value x is {}", x);
     println!("the value y is {}", y);
     // let sum = x+y;
     // return sum;
-    x+y
+    x + y
 }
 
-fn looping(){
+fn looping() {
     let mut counter = 0;
     let result = loop {
         counter += 1;
-        if counter == 10{
+        if counter == 10 {
             break counter;
         }
     };
     println!("The result is {}", result);
 }
 
-fn while_loop(){
+fn while_loop() {
     let mut number = 3;
 
-    while number != 0{
+    while number != 0 {
         println!("{}!", number);
 
         number -= 1;
@@ -59,10 +60,10 @@ fn while_loop(){
     println!("Lift off!!!!")
 }
 
-fn for_loop (){
-    let a = [10,20,30,40,50];
+fn for_loop() {
+    let a = [10, 20, 30, 40, 50];
 
-    for element in a.iter(){
+    for element in a.iter() {
         println!("the value is: {}", element);
     }
 
