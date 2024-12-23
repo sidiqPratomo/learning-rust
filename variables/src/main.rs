@@ -1,6 +1,6 @@
 mod const_vs_immutable;
 mod const_vs_variable;
-
+mod shadowing_vs_mutability;
 
 fn main() {
     let mut x = 5;
@@ -30,6 +30,14 @@ fn main() {
     while_loop();
 
     for_loop();
+
+    let strings = vec![
+        String::from("short"),
+        String::from("medium"),
+        String::from("this is the longest string"),
+    ];
+    let result = longest_string(strings);
+    println!("The longest string is: {}", result);
 }
 
 fn my_function(x: i32, y: i32) -> i32 {
@@ -38,6 +46,16 @@ fn my_function(x: i32, y: i32) -> i32 {
     // let sum = x+y;
     // return sum;
     x + y
+}
+
+fn longest_string(strings: Vec<String>) -> String {
+    let mut longest = strings[0].clone();
+    for s in strings {
+        if s.len() > longest.len() {
+            longest = s;
+        }
+    }
+    longest
 }
 
 fn looping() {
