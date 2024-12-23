@@ -1,3 +1,7 @@
+mod const_vs_immutable;
+mod const_vs_variable;
+
+
 fn main() {
     let mut x = 5;
     println!("The value of x is :{}", x);
@@ -27,8 +31,6 @@ fn main() {
 
     for_loop();
 }
-
-mod const_vs_immutable;
 
 fn my_function(x: i32, y: i32) -> i32 {
     println!("the value x is {}", x);
