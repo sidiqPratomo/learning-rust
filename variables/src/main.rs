@@ -2,6 +2,7 @@ mod const_vs_immutable;
 mod const_vs_variable;
 mod shadowing_vs_mutability;
 mod types_of_function;
+mod traits;
 
 fn main() {
     let mut x = 5;

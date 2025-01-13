@@ -153,3 +153,15 @@ fn print(){
     }
     println!();
 }
+
+//match expression
+fn matched(){
+    let grades = ["A","B","C","D","E","F","FX"];
+    for grade in grades {
+        match grade{
+            "A" | "B"| "C"| "D"|"E"|"F" =>println!("passed"),
+            "FX" => println!("failed"),
+            _ => println!("unknown")
+        }
+    }
+}
